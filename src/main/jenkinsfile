@@ -8,7 +8,7 @@ node('jdk8') {
    stage 'Build'
    git url: 'https://github.com/mishraab/openshift-tasks.git'
    def v = version()
-   sh "${mvnCmd} clean install -DskipTests=true"  
+   sh "${mvnCmd} clean install -DskipTests=true"    
 
    stage 'Test and Analysis' 
    parallel (
