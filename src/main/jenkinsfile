@@ -10,7 +10,7 @@ node('jdk8') {
    def v = version()
    sh "${mvnCmd} clean install -DskipTests=true"  
 
-   stage 'Test and Analysis'
+   stage 'Test and Analysis' 
    parallel (
        'Test': {
            sh "${mvnCmd} test"
